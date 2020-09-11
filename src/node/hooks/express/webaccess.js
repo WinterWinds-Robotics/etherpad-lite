@@ -137,7 +137,7 @@ exports.expressConfigure = (hook_name, args, cb) => {
     exports.secret = settings.sessionKey;
   }
 
-  const sameSite = settings.ssl ? 'Strict' : 'Lax';
+  const sameSite = 'None';
 
   args.app.sessionStore = exports.sessionStore;
   args.app.use(sessionModule({
